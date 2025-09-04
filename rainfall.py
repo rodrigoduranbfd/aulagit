@@ -5,6 +5,9 @@ def mediaChuvas (lista):
     else:
         return -1
 
+def filtraDados (lista):
+    return filter(lambda x: x >=0, lista)
+
 def coletarDados ():
     lista = [] 
     entrada = input("Digite um número ou STOP para terminar: ") 
@@ -15,5 +18,6 @@ def coletarDados ():
 
 def principal():
     valoresChuva = coletarDados()
-    mediaChuva = mediaChuvas(valoresChuva)
+    filtrados = filtraDados(valoresChuva)
+    mediaChuva = mediaChuvas(filtrados)
     print(f"Média de chuvas no período: {mediaChuva}")
