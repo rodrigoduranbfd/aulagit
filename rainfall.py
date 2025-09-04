@@ -1,14 +1,3 @@
-entrada = input("Digite um número ou STOP para terminar: ") 
-lista = [] 
-while entrada.strip().upper() != "STOP": 
-    lista.append(float(entrada)) 
-    entrada = input("Digite um número ou STOP para terminar: ") 
-    if (len(lista) > 0): 
-        media = sum(lista)/len(lista) 
-        return media
-    else:
-        return -1
-
 def filtraDados (lista):
     return filter(lambda x: x >=0, lista)
 
@@ -19,6 +8,12 @@ def coletarDados ():
         lista.append(float(entrada)) 
         entrada = input("Digite um número ou STOP para terminar: ") 
     return lista   
+
+def mediaChuvas(lista): 
+    if len(lista) > 0:
+        return sum(lista)/len(lista)
+    else :
+        return -1
 
 def principal():
     valoresChuva = coletarDados()
