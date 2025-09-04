@@ -3,10 +3,10 @@ def filtraDados (lista):
 
 def coletarDados ():
     lista = [] 
-    entrada = input("Digite um número ou STOP para terminar: ") 
-    while entrada.strip().upper() != "STOP": 
+    entrada = input("Digite um número ou -99999 para terminar: ") 
+    while entrada != -99999: 
         lista.append(float(entrada)) 
-        entrada = input("Digite um número ou STOP para terminar: ") 
+        entrada = input("Digite um número ou -99999 para terminar: ") 
     return lista   
 
 def mediaChuvas(lista): 
