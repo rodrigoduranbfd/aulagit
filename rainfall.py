@@ -1,4 +1,5 @@
 SENTINELA = -99999
+MESSAGE = f"Digite um número ou {SENTINELA} para terminar: "
 
 def filtraDados (lista):
     return filter(lambda x: x >=0, lista)
@@ -8,10 +9,10 @@ def guardaZero (lista):
 
 def coletarDados ():
     lista = [] 
-    entrada = input("Digite um número ou -99999 para terminar: ") 
+    entrada = input(MESSAGE) 
     while entrada != SENTINELA: 
         lista.append(float(entrada)) 
-        entrada = input("Digite um número ou -99999 para terminar: ") 
+        entrada = input(MESSAGE) 
     return lista   
 
 def mediaChuvas(lista): 
