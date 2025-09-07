@@ -1,6 +1,13 @@
 SENTINELA = -99999
 MESSAGE = f"Digite um número ou {SENTINELA} para terminar: "
 
+
+def somar (lista):
+    soma = 0
+    for valor in lista:
+        soma = soma + valor
+    return soma
+
 def filtraDados (lista):
     return filter(lambda x: x >=0, lista)
 
@@ -17,7 +24,7 @@ def coletarDados ():
 
 def mediaChuvas(lista): 
     if (guardaZero(lista)):
-        return sum(lista)/len(lista)
+        return somar(lista)/len(lista)
     else :
         return -1
 
