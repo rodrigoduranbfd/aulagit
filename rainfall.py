@@ -1,10 +1,12 @@
+SENTINELA = -99999
+
 def filtraDados (lista):
     return filter(lambda x: x >=0, lista)
 
 def coletarDados ():
     lista = [] 
     entrada = input("Digite um número ou -99999 para terminar: ") 
-    while entrada != -99999: 
+    while entrada != SENTINELA: 
         lista.append(float(entrada)) 
         entrada = input("Digite um número ou -99999 para terminar: ") 
     return lista   
